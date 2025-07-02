@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -9,13 +9,14 @@
 </head>
 
 <body>
+  <?php include __DIR__ . '/inc/header.php'; ?>
   <form action="add.php" method="post">
     <p>
       <label for="title">タイトル（必須：200文字まで）：</label>
       <input type="text" id="title" name="title" required>
     </p>
     <p>
-      <label for=" isbn">ISBN（13桁までの数字）：</label>
+      <label for="isbn">ISBN（13桁までの数字）：</label>
       <input type="text" id="isbn" name="isbn" />
     </p>
     <p>
@@ -32,6 +33,7 @@
     </p>
     <button type="submit">送信する</button>
   </form>
+  <?php include __DIR__ . '/inc/footer.php'; ?>
 </body>
 
 </html>

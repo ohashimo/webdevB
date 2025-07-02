@@ -13,7 +13,8 @@
 
   <?php
   # connect1.php
-  require_once './functions.php';
+  require_once __DIR__ . '/inc/functions.php';
+  require_once __DIR__ . '/inc/header.php';
 
   try {
     $dbh = db_open();
@@ -31,7 +32,7 @@
       </tr>
       <?php while ($row = $statement->fetch()): ?>
         <tr>
-          <td><a href="edhit.php?id=<?php echo (int) $row['id']; ?>"> 更新</a></td>
+          <td><a href="edit.php?id=<?php echo (int) $row['id']; ?>"> 更新</a></td>
           <td><?php echo str2html($row['title']); ?></td>
           <td><?php echo str2html($row['isbn']); ?></td>
           <td><?php echo str2html($row['price']); ?></td>
@@ -46,6 +47,7 @@
     exit;
   }
   ?>
+  <?php require_once __DIR__ . '/inc/footer.php'; ?>
 
 </body>
 
