@@ -1,6 +1,6 @@
 <form action="" method="post">
-  <p>名前：<input type="text" name="name" /></p>
-  <p>コメント：<textarea name="comment" rows="4" cols="40"></textarea></p>
+  <p>生絵：<input type="text" name="name" /></p>
+  <p>子麺都：<textarea name="comment" rows="4" cols="40"></textarea></p>
   <p>
     <input type="submit" value="投稿" />
   </p>

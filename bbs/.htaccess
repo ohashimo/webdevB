@@ -1,0 +1,10 @@
+DirectoryIndex public/index.php
+RewriteEngine On
+
+# public/以外へのアクセスをpublic/にリダイレクト
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/$1 [L]
+
+# configやappなどへのアクセス制限（任意）
+# RedirectMatch 403 ^/(config|app|logs|storage)/.*$
